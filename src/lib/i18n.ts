@@ -6,8 +6,8 @@ export const defaultLocale: Locale = "fr";
 export const dictionary = {
   fr: {
     nav: {
-      donate: "Prendre rendez-vous",
-      volunteer: "Voir nos services",
+      donate: "Faire un don",
+      volunteer: "Devenir benevole",
       language: "EN",
     },
     common: {
@@ -20,8 +20,8 @@ export const dictionary = {
   },
   en: {
     nav: {
-      donate: "Book a call",
-      volunteer: "View services",
+      donate: "Donate",
+      volunteer: "Volunteer",
       language: "FR",
     },
     common: {

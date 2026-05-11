@@ -86,7 +86,7 @@ export const actions: ActionItem[] = [
     title: { fr: "Orphelinat La Douce Mere d'Azuretti - annee suivante", en: "La Douce Mere d'Azuretti orphanage - following year" },
     excerpt: { fr: "Retour sur le terrain pour prolonger l'accompagnement initie l'annee precedente.", en: "A return to the field to continue the support started the previous year." },
     detail: { fr: "Cette nouvelle visite a permis de renforcer le suivi, de renouveler les dons et de maintenir une presence fiable aupres de l'orphelinat.", en: "This new visit strengthened follow-up, renewed donations and maintained a reliable presence with the orphanage." },
-    image: "/media/edited/actions/retour-a-la-douce-mere-azuretti/azuretti-annee-suivante-01.jpg",
+    image: "/media/edited/actions/retour-a-la-douce-mere-azuretti/azuretti-annee-suivante-10.jpg",
     album: azurettiReturnAlbum,
   },
   {
@@ -94,7 +94,7 @@ export const actions: ActionItem[] = [
     title: { fr: "Orphelinat La Maison du Potier - Yopougon Niangon Nord", en: "La Maison du Potier orphanage - Yopougon Niangon Nord" },
     excerpt: { fr: "Action humanitaire dans un orphelinat de Yopougon Niangon Nord.", en: "Humanitarian action in an orphanage in Yopougon Niangon Nord." },
     detail: { fr: "La mission a combine remise de dons, attention aux enfants et echanges avec les encadrants afin de comprendre les priorites futures.", en: "The mission combined donation delivery, attention to the children and discussions with caregivers to understand future priorities." },
-    image: "/media/edited/actions/maison-du-potier-yopougon-niangon-nord/maison-du-potier-02.jpg",
+    image: "/media/edited/actions/maison-du-potier-yopougon-niangon-nord/maison-du-potier-35.jpg",
     album: potierAlbum,
   },
 ];
@@ -125,13 +125,13 @@ export const featuredGallery: GalleryItem[] = [
     title: { fr: "Groupe Maison du Potier", en: "La Maison du Potier group" },
     type: "photo",
     category: "missions",
-    image: "/media/edited/actions/maison-du-potier-yopougon-niangon-nord/maison-du-potier-02.jpg",
+    image: "/media/edited/actions/maison-du-potier-yopougon-niangon-nord/maison-du-potier-20.jpg",
   },
   {
     title: { fr: "Sourires a Maison du Potier", en: "Smiles at La Maison du Potier" },
     type: "photo",
     category: "children",
-    image: "/media/edited/actions/maison-du-potier-yopougon-niangon-nord/maison-du-potier-13.jpg",
+    image: "/media/edited/actions/maison-du-potier-yopougon-niangon-nord/maison-du-potier-37.jpg",
   },
   {
     title: { fr: "Repas partage", en: "Shared meal" },
@@ -143,19 +143,19 @@ export const featuredGallery: GalleryItem[] = [
     title: { fr: "Retour a Azuretti", en: "Return to Azuretti" },
     type: "photo",
     category: "missions",
-    image: "/media/edited/actions/retour-a-la-douce-mere-azuretti/azuretti-annee-suivante-01.jpg",
+    image: "/media/edited/actions/retour-a-la-douce-mere-azuretti/azuretti-annee-suivante-31.jpg",
   },
   {
     title: { fr: "Yopougon Mami Adjoua", en: "Yopougon Mami Adjoua" },
     type: "photo",
     category: "missions",
-    image: "/media/edited/actions/orphelinat-yopougon-mami-adjoua/yopougon-mami-adjoua-13.jpg",
+    image: "/media/edited/actions/orphelinat-yopougon-mami-adjoua/yopougon-mami-adjoua-18.jpg",
   },
   {
     title: { fr: "Azuretti premiere edition", en: "Azuretti first edition" },
     type: "photo",
     category: "missions",
-    image: "/media/edited/actions/douce-mere-azuretti-premiere-edition/azuretti-premiere-edition-01.jpg",
+    image: "/media/edited/actions/maison-du-potier-yopougon-niangon-nord/maison-du-potier-61.jpg",
   },
 ];
 
@@ -190,7 +190,7 @@ export const posts: Post[] = [
     gallery: albumPhotos("orphelinat-yopougon-mami-adjoua"),
     category: { fr: "Mission", en: "Mission" },
     date: "2022-12-18",
-    image: "/media/edited/actions/orphelinat-yopougon-mami-adjoua/yopougon-mami-adjoua-04.jpg",
+    image: "/media/edited/actions/orphelinat-yopougon-mami-adjoua/yopougon-mami-adjoua-13.jpg",
   },
   {
     slug: "douce-mere-azuretti-premiere-edition",
@@ -220,7 +220,7 @@ export const posts: Post[] = [
     gallery: albumPhotos("douce-mere-azuretti-annee-suivante"),
     category: { fr: "Suivi", en: "Follow-up" },
     date: "2024-09-14",
-    image: "/media/edited/actions/retour-a-la-douce-mere-azuretti/azuretti-annee-suivante-01.jpg",
+    image: "/media/edited/actions/retour-a-la-douce-mere-azuretti/azuretti-annee-suivante-22.jpg",
   },
   {
     slug: "maison-du-potier-yopougon-niangon-nord",
@@ -235,7 +235,7 @@ export const posts: Post[] = [
     gallery: albumPhotos("maison-du-potier-yopougon-niangon-nord"),
     category: { fr: "Mission", en: "Mission" },
     date: "2025-07-19",
-    image: "/media/edited/actions/maison-du-potier-yopougon-niangon-nord/maison-du-potier-02.jpg",
+    image: "/media/edited/actions/maison-du-potier-yopougon-niangon-nord/maison-du-potier-49.jpg",
   },
 ];
 
@@ -250,5 +250,12 @@ export const socialLinks = [
   { name: "Facebook", href: "https://example.com/facebook" },
   { name: "Instagram", href: "https://example.com/instagram" },
   { name: "TikTok", href: "https://example.com/tiktok" },
-  { name: "LinkedIn", href: "https://example.com/linkedin" },
 ];
+
+export const siteContact = {
+  email: "contact@handofgod.org",
+  phone: "+225 07 00 00 00 00",
+  whatsappLabel: "+225 07 00 00 00 00",
+  whatsappHref: "https://wa.me/2250700000000",
+  location: "Abidjan, Cote d'Ivoire",
+};

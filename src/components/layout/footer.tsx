@@ -1,7 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { navItems, socialLinks } from "@/data/site";
+import { navItems, siteContact, socialLinks } from "@/data/site";
 import { Container } from "@/components/ui/section";
+
+const socialIcons = {
+  Facebook: "f",
+  Instagram: "◎",
+  TikTok: "♪",
+};
 
 export function Footer() {
   return (
@@ -29,20 +35,24 @@ export function Footer() {
           <div>
             <h3 className="mb-4 text-sm font-semibold uppercase tracking-[0.18em] text-sky-mist">Contact</h3>
             <div className="space-y-2 text-sm text-white/65">
-              <p>contact@handofgod.org</p>
-              <p>+225 07 00 00 00 00</p>
-              <p>Abidjan, Cote d&apos;Ivoire</p>
+              <p>{siteContact.email}</p>
+              <p>{siteContact.phone}</p>
+              <p>{siteContact.location}</p>
             </div>
             <div className="mt-6 flex flex-wrap gap-2">
-              {socialLinks.map((item) => (
+              {socialLinks.map((item) => {
+                const icon = socialIcons[item.name as keyof typeof socialIcons];
+                return (
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="rounded-full border border-white/15 px-4 py-2 text-xs font-bold text-white/70 transition hover:border-hope-orange hover:text-white"
+                  aria-label={item.name}
+                  className="grid size-11 place-items-center rounded-full border border-white/15 text-lg font-black text-white/70 transition hover:border-hope-orange hover:bg-white/10 hover:text-white"
                 >
-                  {item.name}
+                  <span aria-hidden="true">{icon}</span>
                 </Link>
-              ))}
+                );
+              })}
             </div>
           </div>
         </div>

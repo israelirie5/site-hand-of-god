@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import Link from "next/link";
+import { MessageCircle } from "lucide-react";
 import { ContactForm } from "@/components/sections/forms";
 import { PageHero } from "@/components/sections/page-hero";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/section";
+import { siteContact, socialLinks } from "@/data/site";
 import { pageLocale } from "@/lib/page";
 
 export const metadata: Metadata = { title: "Contact", description: "Contacter Hand of God." };
@@ -10,6 +13,12 @@ export const metadata: Metadata = { title: "Contact", description: "Contacter Ha
 export default async function ContactPage({ searchParams }: { searchParams: Promise<{ lang?: string }> }) {
   const locale = await pageLocale(searchParams);
   const fr = locale === "fr";
+  const socialIcons = {
+    Facebook: "f",
+    Instagram: "◎",
+    TikTok: "♪",
+  };
+
   return (
     <>
       <PageHero eyebrow="Contact" title={fr ? "Parlons d'une mission, d'un don ou d'un partenariat." : "Let us discuss a mission, donation or partnership."} />
@@ -18,10 +27,27 @@ export default async function ContactPage({ searchParams }: { searchParams: Prom
           <Card className="p-8">
             <h2 className="text-2xl font-semibold text-deep-blue">{fr ? "Informations" : "Information"}</h2>
             <div className="mt-6 space-y-4 text-ink/70">
-              <p>contact@handofgod.org</p>
-              <p>+225 07 00 00 00 00</p>
-              <p>WhatsApp: +225 07 00 00 00 00</p>
-              <p>Facebook · Instagram · LinkedIn</p>
+              <p>{siteContact.email}</p>
+              <p>{siteContact.phone}</p>
+              <Link href={siteContact.whatsappHref} className="inline-flex items-center gap-2 font-semibold text-deep-blue transition hover:text-hope-orange">
+                <MessageCircle className="size-5" aria-hidden="true" />
+                WhatsApp: {siteContact.whatsappLabel}
+              </Link>
+              <div className="flex gap-2 pt-2">
+                {socialLinks.map((item) => {
+                  const icon = socialIcons[item.name as keyof typeof socialIcons];
+                  return (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      aria-label={item.name}
+                      className="grid size-11 place-items-center rounded-full border border-sky-mist bg-white text-lg font-black text-deep-blue transition hover:border-hope-orange hover:text-hope-orange"
+                    >
+                      <span aria-hidden="true">{icon}</span>
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
             <div className="mt-8 grid h-64 place-items-center rounded-card bg-sky-mist text-sm font-semibold text-deep-blue">
               {fr ? "Carte placeholder" : "Map placeholder"}
