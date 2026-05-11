@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Hand of God
 
-## Getting Started
+Site officiel vitrine de l'ONG Hand of God, construit avec Next.js App Router, TypeScript, Tailwind CSS, Framer Motion et Sanity CMS.
 
-First, run the development server:
+## Commandes
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Studio Sanity local :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run sanity
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Variables d'environnement
 
-## Learn More
+```bash
+NEXT_PUBLIC_SANITY_PROJECT_ID=your_project_id
+NEXT_PUBLIC_SANITY_DATASET=production
+```
 
-To learn more about Next.js, take a look at the following resources:
+Le site fonctionne avec des donnees locales placeholder tant que Sanity n'est pas configure.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `src/app` : routes App Router et metadata par page
+- `src/components/ui` : design system reutilisable
+- `src/components/sections` : sections de pages, formulaires, galerie
+- `src/components/layout` : navbar, footer, bouton de don flottant
+- `src/data` : donnees placeholder bilingues
+- `src/lib` : i18n, types, helper Sanity
+- `src/sanity/schemas` : schemas CMS
 
-## Deploy on Vercel
+## A remplacer avant mise en production
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Logo final
+- Vraies photos et videos
+- Liens Orange Money, Wave, PayPal et carte bancaire
+- Textes definitifs
+- Informations de contact officielles

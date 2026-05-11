@@ -1,0 +1,6 @@
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="80" rx="18" fill="#0070BA"/>
+  <path d="M39 20h26c11 0 17 6 15 16-2 11-10 17-23 17H45l-4 15H28l12-48Z" fill="white" opacity=".95"/>
+  <path d="M47 29h16c6 0 9 3 8 8-1 6-6 9-13 9H43l4-17Z" fill="#003087"/>
+  <text x="91" y="48" font-family="Arial, sans-serif" font-size="22" font-weight="800" fill="white">PayPal</text>
+</svg>
