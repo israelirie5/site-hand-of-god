@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     siteName: "Hand of God",
   },
   icons: {
-    icon: "/logo-hand-of-god-site.png",
-    apple: "/logo-hand-of-god-site.png",
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
   },
 };
 
